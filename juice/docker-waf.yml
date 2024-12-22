@@ -1,0 +1,9 @@
+services:
+  nginx:
+    image: thib4ut/nginx-modsecurity
+    container_name: nginx-modsecurity
+    ports:
+      - "3001:3001"
+    user: root
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf:ro
